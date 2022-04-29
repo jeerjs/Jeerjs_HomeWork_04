@@ -21,6 +21,7 @@ html {
   padding: 3rem 3rem;
   background-color: grey;
   font-size: 1.6rem;
+  position: static;
 }
 
 .main {
