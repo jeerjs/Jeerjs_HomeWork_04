@@ -51,7 +51,7 @@ const handleoptionclick = (event) => {
       value,
     };
     //Store answer in local storage
-    console.log(answer);
+    storeAnswerInLS(answer);
   }
 
   // go to next question
@@ -136,6 +136,14 @@ const removeBanner = () => {
   bannerSection.remove();
 };
 
+const storeAnswerInLS = (answer) => {
+  //get feeback results from LS
+  const feedbackResults = JSON.parse(localStorage.getItem("feedbackResults"));
+  //push answer to array
+  feedbackResults.push(answer);
+  //set feebackresult in LS
+  localStorage.setItem("feedbackResults", JSON.stringify(feedbackResults));
+};
 const initialiseLocalStorage = () => {
   //get feedback from local strpage
   const feedbackResultsFormLS = JSON.parse(
