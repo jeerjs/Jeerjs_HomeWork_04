@@ -55,3 +55,29 @@ h2,
 h1 {
   padding: 2rem;
 }
+
+h1 {
+  font-size: 4rem;
+}
+.btn {
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  border-color: white;
+  min-width: 20rem;
+  text-transform: uppercase;
+  margin: 3rem;
+}
+
+.btn:hover {
+  background-color: grey;
+  zoom: 120%;
+}
+
+.Section1 {
+  display: flex;
+  flex-direction: column;
+  border: solid grey 3px;
+  padding: 10rem;
+}
