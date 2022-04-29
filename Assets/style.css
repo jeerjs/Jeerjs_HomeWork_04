@@ -81,6 +81,48 @@ h1 {
   border: solid grey 3px;
   padding: 10rem;
 }
+/*----------------------------- content section styles ------------------------------------------*/
+
+.content-section {
+  letter-spacing: 0.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  background: transparent;
+  border: solid white 3px;
+}
+
+.content-section-title {
+  font-size: 4rem;
+}
+
+/* ---------------------------END OF CONTENT SECTION------------ */
+/* ----------------------------START OF QUESTION STYLES---------------- */
+
+.feedback-list {
+  list-style: none;
+  text-align: left;
+  margin: 3rem 2rem;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  background-color: rgba(var(--carnelian-rgb), 0.8);
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+
+.list-item:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+}
+
+/* --------------------END OF QUESTION STYLES--------------------------- */
 
 @media screen and (max-width: 768px) {
   .main {
