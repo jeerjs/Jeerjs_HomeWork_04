@@ -50,3 +50,8 @@ a {
   background-color: grey;
   text-transform: uppercase;
 }
+
+h2,
+h1 {
+  padding: 2rem;
+}
