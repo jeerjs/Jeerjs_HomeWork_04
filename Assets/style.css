@@ -75,9 +75,21 @@ h1 {
   zoom: 120%;
 }
 
-.Section1 {
+#bannersectio {
   display: flex;
   flex-direction: column;
   border: solid grey 3px;
   padding: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin: 0 1rem;
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0.75rem;
+    flex-direction: column;
+  }
 }
