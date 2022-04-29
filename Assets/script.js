@@ -136,11 +136,24 @@ const removeBanner = () => {
   bannerSection.remove();
 };
 
-//declare the event handler function for start button click
-const handleStartButtonClick = () => {
-  removeBanner();
-  renderQuestion();
+const initialiseLocalStorage = () => {
+  //get feedback from local strpage
+  const feedbackResultsFormLS = JSON.parse(
+    localStorage.getItem("feedbackResults")
+  );
+
+  if (!feedbackResultsFormLS) {
+    //if not exsist create empty array
+    localStorage.setItem("feedbackResults", JSON.stringify([]));
+  }
 };
 
-//remove banner section on click and render first question
+//declare the event handler function for start button click
+const handleStartButtonClick = () => {
+  //initialise local storage
+  initialiseLocalStorage();
+  renderQuestion();
+  removeBanner();
+};
+
 startButton.addEventListener("click", handleStartButtonClick);
