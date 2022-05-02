@@ -136,3 +136,23 @@ h1 {
     flex-direction: column;
   }
 }
+
+/* table,
+th,
+td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+} */
+
+#highscorestable {
+  border: solid white 3px;
+  margin: 20px;
+}
+
+h3 {
+  margin-top: 20px;
+  color: red;
+}

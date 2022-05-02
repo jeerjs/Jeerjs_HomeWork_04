@@ -13,8 +13,8 @@
     <header class="header">
       <nav class="nav-container">
         <a href="./index.html">The Pharmacy Quiz</a>
-        <a>Live Score</a>
-        <a>Time Remaining</a>
+        <div id="mainn"><p>Time Remaining</p></div>
+        <a class="time">Timer</a>
       </nav>
     </header>
 
@@ -26,6 +26,14 @@
           <button class="btn" id="start-btn">Start</button>
         </div>
       </section>
+
+      <table id="highscorestable">
+        <h3>Live Scores Table</h3>
+        <tr>
+          <td>Name</td>
+          <td>Score</td>
+        </tr>
+      </table>
       <!-- Question Section -->
       <!-- <section class="content-section question-container">
         <h2 class="content-section-title">Who founded the NHS?</h2>
@@ -51,6 +59,16 @@
             <button class="btn" type="submit">Submit</button>
           </div>
         </form>
+      </section> -->
+      <!-- <section id="bannersectio">
+        <div>
+          <h1>Your Score</h1>
+          <p>Score: <span id="yourScore"></span></p>
+        </div>
+        <div>
+          <button class="btn" id="clearResults">"Clear Results"</button>
+          <button class="btn" id="playAgain">"Play Again</button>
+        </div>
       </section> -->
     </main>
     <footer class="nav-container">
