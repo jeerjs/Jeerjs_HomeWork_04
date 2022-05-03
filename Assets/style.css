@@ -150,9 +150,11 @@ table {
 #highscorestable {
   border: solid white 3px;
   margin: 20px;
+  display: none;
 }
 
-h3 {
+#highscoreh3 {
   margin-top: 20px;
   color: red;
+  display: none;
 }

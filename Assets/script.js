@@ -1,12 +1,3 @@
-//Li not working
-
-//create a table via javascript that hold data passed from local storage
-//identify correct answers and assign a value
-//pass value to local storage
-//display in table
-//clear results button
-//change feedback to just score
-
 const startButton = document.getElementById("start-btn");
 
 const bannerSection = document.getElementById("bannersectio");
@@ -16,10 +7,6 @@ const mainElement = document.getElementById("main");
 const clearbutton = document.createElement("button");
 
 const button2 = document.createElement("button");
-
-// const handleclearbutton = () => {
-//   location.href = "https://jeerjs.github.io/Jeerjs_HomeWork_04/";
-// };
 
 var score = 0;
 
@@ -136,11 +123,6 @@ const handleoptionclick = (event) => {
       secondsLeft -= 10;
     }
 
-    // //build the answer object and answer
-    // const answer = {
-    //   question,
-    //   value,
-    // };
     //Store answer in local storage
     storeInLS("feedbackResults", answer);
   }
@@ -163,12 +145,11 @@ const handleoptionclick = (event) => {
   };
 };
 
-//fucntion to clear allResults from localstorage on click
-//function to go back to home screen
-
 //render the highscores page--------------------------------
 const highscores = () => {
   console.log("highscores");
+  // document.getElementById("highscoretable").style.display = "unset";
+  // document.getElementById("highscoreh3").style.display = "unset";
   const section = document.createElement("section");
   section.setAttribute("id", "bannersectio");
   section.setAttribute("id", "feedback-form");
@@ -177,22 +158,14 @@ const highscores = () => {
   h2.textContent = "Your Score is " + score + " out of 40";
   const h3 = document.createElement("h3");
   h3.setAttribute("class", "title");
-  const h1 = document.createElement("h1");
-  h1.setAttribute("class", "title");
-  h1.textContent = "High Scores Table";
-  const table2 = document.createElement("highscorestable");
-  // const Table1 = document.createElement("Table1");
-  // const tr = document.createElement("tr");
-  // const tdname = document.createElement("tdname");
-  // const tdscore = document.createElement("tdscore");
 
+  const table2 = document.createElement("highscorestable");
   const buttonDiv = document.createElement("div");
   const buttondiv2 = document.createElement("div");
   buttonDiv.setAttribute("class", "form-control");
   buttondiv2.setAttribute("class", "form-control");
   button2.setAttribute("type", "submit");
   button2.setAttribute("class", "btn");
-  // button2.textContent = "Clear Scores";
   clearbutton.setAttribute("type", "submit");
   clearbutton.setAttribute("class", "btn");
   clearbutton.textContent = "Play Again";
@@ -200,7 +173,7 @@ const highscores = () => {
 
   buttonDiv.append(button2);
   buttondiv2.append(clearbutton);
-  section.append(h1, h2, h3, table2, buttonDiv, buttondiv2);
+  section.append(h2, h3, table2, buttonDiv, buttondiv2);
 
   mainElement.append(section);
 };
@@ -213,23 +186,6 @@ function Handlereset() {
   localStorage.clear();
   console.log("I am working");
 }
-var retrievedScores = JSON.parse(localStorage.getItem("allResults"));
-var hst = document.getElementById("highscorestable");
-
-for (var i = 0; i < retrievedScores.length; i++) {
-  hst.innerHTML +=
-    "<tr><td>" +
-    retrievedScores[i].fullName +
-    "</td><td>" +
-    retrievedScores[i].score +
-    "</td></tr>";
-}
-
-//define coirrect anseer and assign value and pass to local storage---
-
-//pass results from local storage to table in highscores page-------------------------------------
-
-//function for timer - deduect when wrong answer.
 
 //function to render the form
 const renderForm = () => {
