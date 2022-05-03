@@ -173,6 +173,21 @@ const highscores = () => {
   section.append(h2, h3, table2, buttonDiv, buttondiv2);
 
   mainElement.append(section);
+
+  var hst = document.getElementById("highscorestable");
+
+  var retrievedScores = JSON.parse(localStorage.getItem("allResults"));
+
+  var retrievedScoresString = JSON.stringify(retrievedScores);
+
+  for (var i = 0; i <= retrievedScoresString.length; i++) {
+    hst.innerHTML +=
+      "<tr><td>" +
+      retrievedScores[i].fullName +
+      "</td><td>" +
+      retrievedScores[i].score +
+      "</td></tr>";
+  }
 };
 
 function handleclearbutton() {
@@ -182,19 +197,6 @@ function handleclearbutton() {
 function Handlereset() {
   localStorage.clear();
   console.log("I am working");
-}
-
-var hst = document.getElementById("highscorestable");
-
-var retrievedScores = JSON.parse(localStorage.getItem("allResults"));
-
-for (var i = 1; i < retrievedScores.length; i++) {
-  hst.innerHTML +=
-    "<tr><td>" +
-    retrievedScores[i].fullName +
-    "</td><td>" +
-    retrievedScores[i].score +
-    "</td></tr>";
 }
 
 //function to render the form
