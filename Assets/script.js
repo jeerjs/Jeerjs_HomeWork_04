@@ -148,8 +148,6 @@ const handleoptionclick = (event) => {
 //render the highscores page--------------------------------
 const highscores = () => {
   console.log("highscores");
-  // document.getElementById("highscoretable").style.display = "unset";
-  // document.getElementById("highscoreh3").style.display = "unset";
   const section = document.createElement("section");
   section.setAttribute("id", "bannersectio");
   section.setAttribute("id", "feedback-form");
@@ -158,7 +156,6 @@ const highscores = () => {
   h2.textContent = "Your Score is " + score + " out of 40";
   const h3 = document.createElement("h3");
   h3.setAttribute("class", "title");
-
   const table2 = document.createElement("highscorestable");
   const buttonDiv = document.createElement("div");
   const buttondiv2 = document.createElement("div");
@@ -185,6 +182,19 @@ function handleclearbutton() {
 function Handlereset() {
   localStorage.clear();
   console.log("I am working");
+}
+
+var hst = document.getElementById("highscorestable");
+
+var retrievedScores = JSON.parse(localStorage.getItem("allResults"));
+
+for (var i = 1; i < retrievedScores.length; i++) {
+  hst.innerHTML +=
+    "<tr><td>" +
+    retrievedScores[i].fullName +
+    "</td><td>" +
+    retrievedScores[i].score +
+    "</td></tr>";
 }
 
 //function to render the form
