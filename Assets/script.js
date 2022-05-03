@@ -178,9 +178,9 @@ const highscores = () => {
 
   var retrievedScores = JSON.parse(localStorage.getItem("allResults"));
 
-  var retrievedScoresString = JSON.stringify(retrievedScores);
+  localStorage.setItem("score", JSON.stringify(score));
 
-  for (var i = 0; i <= retrievedScoresString.length; i++) {
+  for (var i = 0; i <= retrievedScores.length; i++) {
     hst.innerHTML +=
       "<tr><td>" +
       retrievedScores[i].fullName +
